@@ -1,17 +1,35 @@
 import { api } from "@/utils";
 
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+  brand: string;
+  rating: number;
+  numReviews: number;
+}
+
 export const testService = {
-  getProducts: async () => {
+  getProducts: async (): Promise<Product[]> => {
     try {
-      const res = await api.get("/products");
-      if (res.status === 200) {
-        return res.data;
-      } else {
-        throw new Error("Failed to fetch products");
-      }
+      const res = await api.get<Product[]>("/products");
+      return res.data;
     } catch (error) {
-      throw error;
+      console.error('Failed to fetch products:', error);
+      throw new Error("Failed to fetch products");
     }
   },
-  updateProduct: (id: string, data: any) => api.put(`/products/${id}`, data)
+  
+  updateProduct: async (id: string, data: Product): Promise<Product> => {
+    try {
+      const res = await api.put<Product>(`/products/${id}`, data);
+      return res.data;
+    } catch (error) {
+      console.error(`Failed to update product ${id}:`, error);
+      throw error;
+    }
+  }
 }
