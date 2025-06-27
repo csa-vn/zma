@@ -1,4 +1,4 @@
-import { Product } from "types";
+import { Product } from "@/types";
 import ProductItem from "./product-item";
 import { HTMLAttributes } from "react";
 

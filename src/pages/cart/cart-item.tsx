@@ -1,8 +1,8 @@
 import Checkbox from "@/components/checkbox";
 import QuantityInput from "@/components/quantity-input";
 import { useAddToCart } from "@/hooks";
-import { CartItem as CartItemProps } from "types";
-import { formatPrice } from "@/utils/format";
+import { CartItem as CartItemProps } from "@/types";
+import { formatPrice } from "@/utils";
 import { animated, useSpring } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { RemoveIcon } from "@/components/vectors";
@@ -64,7 +64,7 @@ export default function CartItem(props: CartItemProps) {
     <div className="relative">
       <div className="absolute right-0 top-0 bottom-0 w-20 border-t-[0.5px] border-b-[0.5px] border-black/10">
         <div
-          className="bg-danger text-white/95 w-full h-full flex flex-col space-y-1 justify-center items-center cursor-pointer"
+          className="bg-danger text-white/95 size-full flex flex-col space-y-1 justify-center items-center cursor-pointer"
           onClick={() => addToCart(0)}
         >
           <RemoveIcon />

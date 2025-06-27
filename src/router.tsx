@@ -7,7 +7,7 @@ import HomePage from "@/pages/home";
 import ProfilePage from "@/pages/profile";
 import SearchPage from "@/pages/search";
 import { createBrowserRouter } from "react-router-dom";
-import { getBasePath } from "@/utils/zma";
+import { getBasePath } from "@/utils";
 
 const router = createBrowserRouter(
   [

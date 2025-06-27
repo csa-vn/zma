@@ -1,5 +1,5 @@
-import { Product } from "types";
-import { formatPrice } from "@/utils/format";
+import { Product } from "@/types";
+import { formatPrice } from "@/utils";
 import TransitionLink from "./transition-link";
 import { useState } from "react";
 

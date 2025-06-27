@@ -3,7 +3,7 @@ import { CustomerSupportIcon } from "@/components/vectors";
 import { useCheckout, useCustomerSupport } from "@/hooks";
 import { useAtomValue } from "jotai";
 import { cartTotalState } from "@/state";
-import { formatPrice } from "@/utils/format";
+import { formatPrice } from "@/utils";
 
 export default function CartSummary() {
   const { totalItems, totalAmount } = useAtomValue(cartTotalState);

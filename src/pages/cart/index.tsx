@@ -12,7 +12,7 @@ export default function CartPage() {
 
   if (!cart.length) {
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center space-y-8">
+      <div className="size-full flex flex-col items-center justify-center space-y-8">
         <EmptyBoxIcon />
         <div className="text-2xs text-inactive text-center">
           Không có sản phẩm trong giỏ hàng
@@ -21,7 +21,7 @@ export default function CartPage() {
     );
   }
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="size-full flex flex-col">
       <SelectAll />
       <HorizontalDivider />
       <CartList />
