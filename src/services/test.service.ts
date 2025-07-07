@@ -22,7 +22,7 @@ export const testService = {
       throw new Error("Failed to fetch products");
     }
   },
-  
+
   updateProduct: async (id: string, data: Product): Promise<Product> => {
     try {
       const res = await api.put<Product>(`/products/${id}`, data);

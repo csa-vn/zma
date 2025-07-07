@@ -1,11 +1,16 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "", // TODO: Quang Linh
+  baseURL: "https://jsonplaceholder.typicode.com", // TODO: Quang Linh
   headers: {
     "Content-Type": "application/json"
   }
 });
+
+const getProducts = async () => {
+  const res = await api.get('/posts');
+  return res;
+};
 
 api.interceptors.request.use((config) => {
   // TODO: Quang Linh
@@ -17,4 +22,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export { api };
+export { api, getProducts };
