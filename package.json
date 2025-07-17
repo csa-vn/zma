@@ -15,22 +15,25 @@
     "Samsung >= 5"
   ],
   "scripts": {
-    "start": "zmp start",
+    "dev": "zmp start",
     "deploy": "zmp deploy",
     "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.4",
     "@use-gesture/react": "^10.3.1",
+    "axios": "^1.10.0",
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
     "jotai": "^2.10.0",
+    "motion": "^12.19.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.0",
     "resize-observer-polyfill": "^1.5.1",
+    "zmp-cli": "^3.15.12",
     "zmp-sdk": "^2.41.0",
     "zmp-ui": "^1.11.5"
   },
