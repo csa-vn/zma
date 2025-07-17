@@ -1,6 +1,6 @@
 import { atom } from "jotai";
 import { atomFamily, unwrap } from "jotai/utils";
-import { Cart, Category, Color, Product } from "types";
+import { Cart, Category, Color, Product } from "@/types";
 import { requestWithFallback } from "@/utils/request";
 import { getUserInfo } from "zmp-sdk";
 

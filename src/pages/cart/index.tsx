@@ -6,7 +6,7 @@ import { useAtomValue } from "jotai";
 import { cartState } from "@/state";
 import { EmptyBoxIcon } from "@/components/vectors";
 import SelectAll from "./select-all";
-
+import { getUserInfo } from "zmp-sdk/apis";
 export default function CartPage() {
   const cart = useAtomValue(cartState);
 
